@@ -11,12 +11,11 @@ public class PessoaFisica extends Pessoa{
     public PessoaFisica() {
     }
 
-    public PessoaFisica(String nome, LocalDate nascimento, PessoaFisica pessoaF, String CPF, PessoaFisica mae) {
-        super(nome, nascimento, pessoaF);
+    public PessoaFisica(String nome, LocalDate nascimento, String CPF, PessoaFisica mae) {
+        super(nome, nascimento);
         this.CPF = CPF;
         this.mae = mae;
     }
-
 
     public String getCPF() {
         return CPF;

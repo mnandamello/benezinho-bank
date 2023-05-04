@@ -26,6 +26,7 @@ public class Main {
         maria.setCPF("416008977-99");
         maria.setNascimento(LocalDate.of(2004,7,12));
         maria.setNome("Maria Fernanda Ribeiro Mello");
+        maria.setMae(mae);
 
         ContaCorrente cc = new ContaCorrente();
         cc.setAgencia(osasco);

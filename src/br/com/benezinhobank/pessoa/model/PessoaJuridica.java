@@ -1,22 +1,24 @@
 package br.com.benezinhobank.pessoa.model;
 
 import java.time.LocalDate;
+import java.util.Collection;
 
 public class PessoaJuridica extends Pessoa{
 
     private String CNPJ;
     private String razaoSocial;
+    //aqui é pra comportar varias pessoas
+    Collection<Pessoa> socios;
 
 
     public PessoaJuridica() {
     }
 
-    public PessoaJuridica(String nome, LocalDate nascimento, PessoaFisica pessoaF, String CNPJ, String razaoSocial) {
-        super(nome, nascimento, pessoaF);
+    public PessoaJuridica(String nome, LocalDate nascimento, String CNPJ, String razaoSocial) {
+        super(nome, nascimento);
         this.CNPJ = CNPJ;
         this.razaoSocial = razaoSocial;
     }
-
 
     public String getCNPJ() {
         return CNPJ;
