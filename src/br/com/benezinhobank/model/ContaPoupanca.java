@@ -10,8 +10,8 @@ public class ContaPoupanca extends Conta{
     public ContaPoupanca() {
     }
 
-    public ContaPoupanca(double saldo, Agencia agencia, Pessoa titular, int aiversario) {
-        super(saldo, agencia, titular);
+    public ContaPoupanca(double saldo, Agencia agencia, Pessoa titular, String numero, int aiversario) {
+        super(saldo, agencia, titular, numero);
         this.aiversario = aiversario;
     }
 
@@ -22,5 +22,12 @@ public class ContaPoupanca extends Conta{
 
     public void setAiversario(int aiversario) {
         this.aiversario = aiversario;
+    }
+
+    @Override
+    public String toString() {
+        return "ContaPoupanca{" +
+                "aiversario=" + aiversario +
+                "} " + super.toString();
     }
 }

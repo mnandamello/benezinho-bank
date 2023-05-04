@@ -6,7 +6,7 @@ public abstract class Pessoa {
 
     private String nome;
     LocalDate nascimento;
-    PessoaFisica pessoaF;
+    PessoaFisica pessoaF; //chamou aqui pq a mae tbm é uma pessoa
 
 
     public Pessoa() {
@@ -41,5 +41,14 @@ public abstract class Pessoa {
 
     public void setPessoaF(PessoaFisica pessoaF) {
         this.pessoaF = pessoaF;
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + nome + '\'' +
+                ", nascimento=" + nascimento +
+                ", pessoaF=" + pessoaF +
+                '}';
     }
 }
