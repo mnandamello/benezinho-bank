@@ -1,6 +1,7 @@
 package br.com.benezinhobank.model;
 
-public class Agencia {
+public class
+Agencia {
 
     private String numero;
     private String nome;

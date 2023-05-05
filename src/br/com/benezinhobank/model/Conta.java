@@ -9,6 +9,15 @@ public abstract class Conta {
     Pessoa titular;
     private String numero;
 
+    public boolean sacar(double valor){
+        if ((valor<=0)) return false;
+
+        if(this.saldo<valor) return false;
+
+        this.saldo = this.saldo - valor;
+        return true;
+    }
+
     public Conta() {
     }
 

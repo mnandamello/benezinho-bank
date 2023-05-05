@@ -6,6 +6,14 @@ public class ContaCorrente extends Conta {
 
     private double limite;
 
+    public boolean sacar(double valor){
+        double valorDisponivel = getSaldo() + getLimite();
+        if (valor<=0) return false;
+        if(valorDisponivel < valor) return false;
+        setSaldo(getSaldo()-valor);
+        return true;
+    }
+
     public ContaCorrente() {
     }
 
@@ -22,12 +30,11 @@ public class ContaCorrente extends Conta {
         this.limite = limite;
     }
 
+
     @Override
     public String toString() {
         return "ContaCorrente{" +
                 "limite=" + limite +
                 "} " + super.toString();
     }
-
-
 }
