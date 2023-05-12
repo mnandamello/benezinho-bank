@@ -16,9 +16,9 @@ Agencia {
 
     public Agencia addConta(Conta conta){
         this.contas.add(conta);
-        conta.setAgencia(this);
-        var numeroConta = this.contas.size()+1;
-        var digito = new Random().nextInt(9);
+        conta.setAgencia(this); //tem essa parte pq uma conta tem q estar ligada a uma agencia
+        var numeroConta = this.contas.size()+1;//numero da conta
+        var digito = new Random().nextInt(9);//geranbdo o numero da conta
         conta.setNumero(numeroConta + "-" + digito);
         return this;
     }
